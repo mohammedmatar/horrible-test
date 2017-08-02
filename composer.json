@@ -1,0 +1,21 @@
+{
+    "name": "matar/sample",
+    "description": "just sample",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^6.2",
+        "fzaninotto/faker": "^1.7@dev",
+        "peridot-php/peridot": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"SampleApp\\": "src/"}
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammed Matar",
+            "email": "matar@snsoerp.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
