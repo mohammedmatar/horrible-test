@@ -6,7 +6,7 @@
  * Time: 11:58 ص
  */
 
-namespace tests;
+namespace SimpleApp;
 
 use \SampleApp\HeroAgency;
 use PHPUnit\Framework\TestCase;
