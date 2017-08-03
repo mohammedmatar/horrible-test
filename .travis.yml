@@ -26,6 +26,6 @@ before_script:
   - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
   - sudo service apache2 restart
 script:
-    - vendor/bin/phpunit --coverage-clover=coverage.xml
+    - vendor/bin/phpunit
 after_success:
     - bash <(curl -s https://codecov.io/bash)
