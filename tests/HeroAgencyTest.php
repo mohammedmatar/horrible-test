@@ -14,7 +14,7 @@ use \SampleApp\IHero;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Faker\Factory;
 /**
- * @covers HeroAgency::
+ * @codeCoverageIgnore
  */
 class HeroAgencyTest extends TestCase
 {
