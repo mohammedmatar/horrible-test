@@ -13,6 +13,9 @@ use PHPUnit\Framework\TestCase;
 use \SampleApp\IHero;
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Faker\Factory;
+/**
+ * @covers HeroAgency::
+ */
 class HeroAgencyTest extends TestCase
 {
     /**
