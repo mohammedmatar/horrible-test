@@ -18,6 +18,7 @@ class HeroAgencyTest extends TestCase
     /**
      * @test
      * @covers
+     * HeroAgency::hire
      */
     public function hero_is_hired()
     {
@@ -44,6 +45,7 @@ class HeroAgencyTest extends TestCase
     /**
      * @test
      * @covers
+     * HeroAgency::hire
      */
     public function hero_is_hired_by_faker()
     {
@@ -65,6 +67,7 @@ class HeroAgencyTest extends TestCase
     /**
      * @test
      * @covers
+     * HeroAgency::terminateContract
      */
     public function terminate_contract_of_a_hero()
     {
