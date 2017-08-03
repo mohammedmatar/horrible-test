@@ -10,8 +10,8 @@ php:
 install:
   composer install
 before_script:
-    - travis_retry composer self-update
-    - travis_retry composer install --no-interaction --prefer-source --dev
+  - travis_retry composer self-update
+  - travis_retry composer install --no-interaction --prefer-source --dev
   - sudo apt-get update
   - sudo apt-get install apache2 libapache2-mod-fastcgi
   # enable php-fpm
