@@ -78,7 +78,7 @@ class HeroAgency extends Collection
      */
     public function allHeroes()
     {
-        $mrRobot = new IHero();
+        /*$mrRobot = new IHero();
         $mrRobot->name  = 'Mr Robot';
         $mrRobot->age   = 25;
         $mrRobot->power = 'Hacking';
@@ -90,6 +90,9 @@ class HeroAgency extends Collection
 
         $this->hire( $mrRobot );
         $this->hire( $blackGeek );
-        return json_encode($this->objects);
+		return json_encode($this->objects);
+		*/
+		return $this->objects;
+
     }
 }
