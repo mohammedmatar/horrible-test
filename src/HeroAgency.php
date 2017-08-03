@@ -78,6 +78,18 @@ class HeroAgency extends Collection
      */
     public function allHeroes()
     {
-        return $this->objects;
+        $mrRobot = new IHero();
+        $mrRobot->name  = 'Mr Robot';
+        $mrRobot->age   = 25;
+        $mrRobot->power = 'Hacking';
+
+        $blackGeek = new IHero();
+        $blackGeek->name    = 'Black Geek';
+        $blackGeek->power   = 'Tracking People';
+        $blackGeek->age     = 9;
+
+        $this->hire( $mrRobot );
+        $this->hire( $blackGeek );
+        return json_encode($this->objects);
     }
 }
