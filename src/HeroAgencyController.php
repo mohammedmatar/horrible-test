@@ -16,6 +16,7 @@ class HeroAgencyController
     {
         $db = DatabaseProvider::getInstance();
         $db->initConnection();
+//        $db->migrateUp();
         $res->setFormat("json");
         $res->add( Hero::all());
         $res->send(200);
@@ -40,8 +41,8 @@ class HeroAgencyController
         ));
         $hero->save();
 
-//        $db->migrateUp();
-//        $res->setFormat('text');
+        $db->migrateUp();
+        $res->setFormat('text');
         $res->add( $hero );
         $res->send(200);
     }

@@ -25,6 +25,7 @@ class HeroAgency extends Collection
     public function hire( $hero )
     {
         $this->add( $hero );
+//        $this->add( new IHero());
         return $this->objects;
     }
     /**
