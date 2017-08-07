@@ -32,11 +32,11 @@ class DatabaseProvider {
     public function initConnection()
     {
         $this->capsule->addConnection(array(
-            'driver'    => 'mysql',
-            'host'      => 'sql8.freemysqlhosting.net',
-            'database'  => 'sql8188361',
-            'username'  => 'sql8188361',
-            'password'  => 'qC9jzENHlQ',
+            'driver'    => 'sqlite',
+            //'host'      => 'sql8.freemysqlhosting.net',
+            'database'  => 'database.sqlite',
+            //'username'  => 'sql8188361',
+            //'password'  => 'qC9jzENHlQ',
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci'
 //            'prefix'    => ''
@@ -49,10 +49,10 @@ class DatabaseProvider {
     {
         Capsule::schema()->create('heroes', function ($table) {
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->integer('age');
-            $table->string('power');
-            $table->string('avatar');
+            $table->string('name')->nullable();
+            $table->integer('age')->nullable();
+            $table->string('power')->nullable();
+            $table->string('avatar')->nullable();
             $table->string('updated_at');
             $table->string('created_at');
 //            $table->nullableTimestamps();

@@ -16,7 +16,7 @@ class HeroAgencyController
     {
         $db = DatabaseProvider::getInstance();
         $db->initConnection();
-//        $db->migrateUp();
+        $db->migrateUp();
         $res->setFormat("json");
         $res->add( Hero::all());
         $res->send(200);
@@ -30,7 +30,7 @@ class HeroAgencyController
         $req->format = 'json';
 
         $reqData = json_decode(json_encode(json_decode($req->data["_RAW_HTTP_DATA"])[0]), true);
-        var_dump($reqData);
+        //var_dump($reqData);
         $hero = new Hero();
 
         $hero->create( array(
@@ -41,7 +41,7 @@ class HeroAgencyController
         ));
         $hero->save();
 
-        $db->migrateUp();
+        //$db->migrateUp();
         $res->setFormat('text');
         $res->add( $hero );
         $res->send(200);

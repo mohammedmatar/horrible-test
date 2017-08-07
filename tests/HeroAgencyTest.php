@@ -40,8 +40,6 @@ class HeroAgencyTest extends TestCase
         $this->assertEmpty( $heroes->allHeroes(), 'There is no heroes available right now !' );
         $heroes->hire( $mrRobot );
         $this->assertEquals( 1, $heroes->numberOfHeroes(), 'Number of Heroes is not increased !');
-//        $heroes->hire( $blackGeek );
-//        $this->assertEquals( 2, $heroes->numberOfHeroes(), 'Number of Heroes is not increased !');
     }
 
 
@@ -54,7 +52,7 @@ class HeroAgencyTest extends TestCase
         $faker = Factory::create();
         $hero = new IHero();
         $heroAgency = new HeroAgency();
-        for( $index = 1; $index <= 100; $index++ ) {
+        for( $index = 1; $index <= 10; $index++ ) {
             $hero->create(
                 $faker->name(),
                 $faker->numberBetween(9, 40),
@@ -63,7 +61,7 @@ class HeroAgencyTest extends TestCase
             );
             $heroAgency->hire($hero);
         }
-        var_dump($heroAgency->allHeroes());
+//        var_dump($heroAgency->allHeroes());
         $this->assertEquals( 10, $heroAgency->numberOfHeroes(), ''. $heroAgency->numberOfHeroes(). 'heroes is hired !');
     }
 
